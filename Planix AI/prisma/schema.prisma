@@ -1,0 +1,59 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String    @id @default(cuid())
+  name      String?
+  email     String?   @unique
+  createdAt DateTime  @default(now())
+  roadmaps  Roadmap[]
+}
+
+model Roadmap {
+  id            String         @id @default(cuid())
+  userId        String?
+  goal          String
+  timeline      String
+  hoursPerDay   String
+  createdAt     DateTime       @default(now())
+  user          User?          @relation(fields: [userId], references: [id])
+  phases        RoadmapPhase[]
+  chatMessages  ChatMessage[]
+  modeOutputs   ModeOutput[]
+}
+
+model RoadmapPhase {
+  id          String   @id @default(cuid())
+  roadmapId   String
+  title       String
+  duration    String
+  completed   Boolean  @default(false)
+  objectives  String[]
+  impact      String?
+  roadmap     Roadmap  @relation(fields: [roadmapId], references: [id], onDelete: Cascade)
+}
+
+model ChatMessage {
+  id        String   @id @default(cuid())
+  roadmapId String
+  role      String   // "user" or "ai"
+  content   String?
+  mode      String?
+  createdAt DateTime @default(now())
+  roadmap   Roadmap  @relation(fields: [roadmapId], references: [id], onDelete: Cascade)
+}
+
+model ModeOutput {
+  id             String   @id @default(cuid())
+  roadmapId      String
+  mode           String
+  structuredJSON Json
+  createdAt      DateTime @default(now())
+  roadmap        Roadmap  @relation(fields: [roadmapId], references: [id], onDelete: Cascade)
+}
