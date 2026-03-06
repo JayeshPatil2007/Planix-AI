@@ -106,15 +106,52 @@ Planix AI provides:
 ```
 Planix-AI/
 │
-├── app/              # Next.js App Router pages
-├── components/       # UI components
-├── hooks/            # Custom React hooks
-├── lib/              # Utility functions & Gemini integration
-├── prisma/           # Database schema
-├── .env.example      # Environment template
+├── app/                       # Next.js App Router
+│   ├── api/                   # API routes
+│   ├── globals.css            # Global styles
+│   ├── layout.tsx             # Root layout
+│   └── page.tsx               # Main entry page
+│
+├── components/
+│   ├── ui/                    # Reusable UI components
+│   │   ├── Button.tsx
+│   │   └── Input.tsx
+│   │
+│   ├── views/                 # Major UI screens
+│   │   ├── Onboarding.tsx
+│   │   ├── SplashIntro.tsx
+│   │   └── Workspace.tsx
+│   │
+│   └── workspace/             # Workspace-specific components
+│       ├── HistoryDrawer.tsx
+│       ├── Navbar.tsx
+│       └── Roadmap.tsx
+│
+├── hooks/
+│   └── use-mobile.ts          # Custom hook for mobile detection
+│
+├── lib/                       # Core utilities and integrations
+│   ├── gemini.ts              # Gemini AI integration
+│   ├── prisma.ts              # Prisma database client
+│   └── utils.ts               # Helper utilities
+│
+├── prisma/
+│   └── schema.prisma          # Database schema
+│
+├── .env.example               # Environment variables template
+├── .eslintrc.json             # ESLint configuration
+├── .gitignore
+├── LICENSE
+├── README.md
+│
+├── eslint.config.mjs
+├── metadata.json
+├── next-env.d.ts
 ├── next.config.ts
+├── package-lock.json
 ├── package.json
-└── README.md
+├── postcss.config.mjs
+└── tsconfig.json
 ```
 
 ---
