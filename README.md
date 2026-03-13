@@ -118,7 +118,7 @@ Frontend (Next.js + React)
 API Layer (Next.js API Routes)
         │
         ▼
-AI Engine (Google Gemini API)
+AI Engine (Google Gemini API/ASI-1 API/Nova API)
         │
         ▼
 Database (PostgreSQL via Prisma ORM)
@@ -133,7 +133,7 @@ Database (PostgreSQL via Prisma ORM)
 | Frontend | Next.js (App Router) |
 | Language | TypeScript |
 | Styling | Tailwind CSS |
-| AI Engine | Google Gemini API |
+| AI Engine | ASI-1 API/Google Gemini API |
 | Database | PostgreSQL |
 | ORM | Prisma |
 | UI Components | Shadcn UI / Radix |
@@ -208,7 +208,7 @@ npm install
 Create `.env.local`:
 
 ```
-GEMINI_API_KEY=your_api_key
+API_KEY=your_api_key
 DATABASE_URL=your_database_url
 ```
 
