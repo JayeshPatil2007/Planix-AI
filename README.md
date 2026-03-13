@@ -1,169 +1,190 @@
 <div align="center">
 
 # 🚀 Planix AI  
-### The AI-Powered Learning & Growth Operating System
+### The AI Learning Operating System
 
-An intelligent roadmap engine that generates personalized learning paths, provides real-time AI mentorship, and tracks user progress — all in one adaptive system.
+Turn learning goals into structured execution systems.
 
-Built with ❤️ for Hackathons.
+AI generates personalized learning roadmaps, teaches concepts, and tracks progress — all inside one intelligent platform.
 
 </div>
 
 ---
 
-## 🌟 Overview
+# 🌍 Overview
 
-**Planix AI** is an AI-driven Learning & Growth Operating System designed to eliminate confusion about:
+**Planix AI** is an AI-powered learning operating system designed to help people learn complex skills with structured guidance.
 
-- What to learn
-- Where to start
-- How to structure growth
-- How to stay consistent
+Modern learners face a common problem:
 
-Instead of generic roadmaps, Planix dynamically generates **personalized learning plans** based on:
+- Too many tutorials
+- No clear starting point
+- No structured roadmap
+- No progress system
 
-- User goal  
-- Skill level  
-- Time availability  
-- Learning pace  
+Planix AI solves this by transforming a simple goal into a **structured learning architecture**.
 
-It transforms abstract ambitions into structured execution plans.
+Users simply provide:
 
----
+- A learning goal  
+- Available days  
+- Daily learning time  
 
-## 🎯 Problem Statement
-
-Students and early developers struggle with:
-
-- Information overload  
-- Random YouTube tutorials  
-- No structured roadmap  
-- No tracking system  
-- No adaptive mentorship  
-
-Planix AI solves this by acting as an **AI Growth Architect**.
+The system then generates a **phase-based learning roadmap** with clear milestones.
 
 ---
 
-## 🧠 Solution
+# 🎯 Problem
 
-Planix AI provides:
+Self-directed learning on the internet is chaotic.
 
-- 🗺️ AI-generated structured learning roadmaps  
-- 📚 Teaching Mode (concept explanations in clean structure)  
-- 📝 Smart Notes Generation  
-- 📊 Progress Tracking Dashboard  
-- 🤖 Conversational AI Mentor  
-- 🔁 Adaptive roadmap refinement  
+Learners often experience:
 
----
+- Information overload
+- Unstructured tutorials
+- Lack of direction
+- No accountability
+- No progress tracking
 
-## 🚀 Core Features
-
-### 🔹 AI Roadmap Generator
-- Personalized roadmap creation
-- Structured modular breakdown
-- Phase-based learning design
-
-### 🔹 Teaching Mode
-- Clean structured concept explanations
-- No messy formatting
-- Beginner-friendly mental models
-
-### 🔹 Notes Mode
-- Structured summary output
-- Clean formatting for readability
-
-### 🔹 Dashboard
-- Track learning progress
-- Structured module tracking
-- Growth visibility
-
-### 🔹 Authentication System
-- Google Login
-- Email Login
-- Secure session handling
+This leads to **abandoned learning journeys**.
 
 ---
 
-## 🛠 Tech Stack
+# 💡 Solution
 
-| Category | Technology |
-|----------|------------|
-| Framework | Next.js (App Router) |
+Planix AI acts as a **Learning Architect**.
+
+Instead of recommending random content, it **designs a structured progression system**.
+
+The platform:
+
+1️⃣ Converts goals into learning architecture  
+2️⃣ Breaks knowledge into phases  
+3️⃣ Generates milestones with estimated effort  
+4️⃣ Provides AI explanations  
+5️⃣ Tracks progress through a dashboard
+
+The result is a **clear path from beginner to mastery**.
+
+---
+
+# ⚙️ Key Features
+
+### 🧠 AI Roadmap Generator
+Generate structured learning roadmaps based on:
+- skill goal
+- time availability
+- learning duration
+
+Each roadmap includes phases and milestones.
+
+---
+
+### 📚 Teaching Mode
+Explains complex topics with clean structured outputs designed for beginners.
+
+---
+
+### 📝 Smart Notes Mode
+Automatically generates well-structured learning notes for revision and clarity.
+
+---
+
+### 📊 Progress Tracking
+Track completed milestones and visualize progress through the dashboard.
+
+---
+
+### 🗂 Roadmap History
+Users can access previously generated learning paths and continue progress.
+
+---
+
+### 🔐 Authentication
+Secure login system supporting:
+- Google authentication
+- Email authentication
+
+---
+
+# 🏗 Architecture
+
+The system follows a simple full-stack architecture.
+
+```
+Frontend (Next.js + React)
+        │
+        ▼
+API Layer (Next.js API Routes)
+        │
+        ▼
+AI Engine (Google Gemini API)
+        │
+        ▼
+Database (PostgreSQL via Prisma ORM)
+```
+
+---
+
+# 🛠 Tech Stack
+
+| Layer | Technology |
+|------|-------------|
+| Frontend | Next.js (App Router) |
+| Language | TypeScript |
+| Styling | Tailwind CSS |
 | AI Engine | Google Gemini API |
 | Database | PostgreSQL |
 | ORM | Prisma |
-| Styling | Tailwind CSS |
-| UI Components | Shadcn / Radix UI |
-| State Management | React Hooks |
-| Deployment Ready | Vercel Compatible |
+| UI Components | Shadcn UI / Radix |
+| Deployment | Vercel |
 
 ---
 
-## 📂 Project Structure
+# 📂 Project Structure
 
 ```
 Planix-AI/
 │
-├── app/                       # Next.js App Router
-│   ├── api/                   # API routes
-│   ├── globals.css            # Global styles
-│   ├── layout.tsx             # Root layout
-│   └── page.tsx               # Main entry page
+├── app/
+│   ├── api/
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
 │
 ├── components/
-│   ├── ui/                    # Reusable UI components
+│   ├── ui/
 │   │   ├── Button.tsx
 │   │   └── Input.tsx
 │   │
-│   ├── views/                 # Major UI screens
+│   ├── views/
 │   │   ├── Onboarding.tsx
 │   │   ├── SplashIntro.tsx
 │   │   └── Workspace.tsx
 │   │
-│   └── workspace/             # Workspace-specific components
+│   └── workspace/
 │       ├── HistoryDrawer.tsx
 │       ├── Navbar.tsx
 │       └── Roadmap.tsx
 │
 ├── hooks/
-│   └── use-mobile.ts          # Custom hook for mobile detection
+│   └── use-mobile.ts
 │
-├── lib/                       # Core utilities and integrations
-│   ├── gemini.ts              # Gemini AI integration
-│   ├── prisma.ts              # Prisma database client
-│   └── utils.ts               # Helper utilities
+├── lib/
+│   ├── gemini.ts
+│   ├── prisma.ts
+│   └── utils.ts
 │
 ├── prisma/
-│   └── schema.prisma          # Database schema
+│   └── schema.prisma
 │
-├── .env.example               # Environment variables template
-├── .eslintrc.json             # ESLint configuration
-├── .gitignore
-├── LICENSE
 ├── README.md
-│
-├── eslint.config.mjs
-├── metadata.json
-├── next-env.d.ts
-├── next.config.ts
-├── package-lock.json
-├── package.json
-├── postcss.config.mjs
-└── tsconfig.json
+└── package.json
 ```
 
 ---
 
-## ⚙️ Installation & Local Setup
-
-### Prerequisites
-- Node.js 18+
-- PostgreSQL (if database enabled)
-- Gemini API Key
-
----
+# ⚙️ Local Setup
 
 ### 1️⃣ Clone Repository
 
@@ -182,16 +203,14 @@ npm install
 
 ---
 
-### 3️⃣ Setup Environment Variables
+### 3️⃣ Configure Environment Variables
 
-Create a `.env.local` file in the root:
+Create `.env.local`:
 
-```env
-GEMINI_API_KEY=your_gemini_api_key_here
-DATABASE_URL=your_database_connection_string
 ```
-
-(Refer to `.env.example` for structure)
+GEMINI_API_KEY=your_api_key
+DATABASE_URL=your_database_url
+```
 
 ---
 
@@ -201,7 +220,7 @@ DATABASE_URL=your_database_connection_string
 npm run dev
 ```
 
-App runs at:
+Open:
 
 ```
 http://localhost:3000
@@ -209,60 +228,53 @@ http://localhost:3000
 
 ---
 
-## 🧩 How It Works
+# 🔄 How It Works
 
-1. User enters learning goal
-2. Gemini API generates structured roadmap
-3. System formats roadmap cleanly
-4. Dashboard tracks learning progress
-5. Teaching mode explains core concepts clearly
-6. Notes mode generates structured summaries
-
----
-
-## 🔒 Environment Variables
-
-Required:
-
-```
-GEMINI_API_KEY
-DATABASE_URL
-```
-
-Never commit `.env.local` to repository.
+1️⃣ User enters learning goal  
+2️⃣ User sets timeline and daily hours  
+3️⃣ AI generates a structured roadmap  
+4️⃣ Roadmap is divided into phases  
+5️⃣ Milestones guide the learning journey  
+6️⃣ Progress is tracked inside the dashboard
 
 ---
 
-## 🏆 Hackathon Highlights
+# 🚀 Hackathon Submission Highlights
 
-- Real AI integration (not mocked)
-- Structured AI formatting system
-- Adaptive roadmap engine
-- Full-stack architecture
-- Authentication system
-- Production-ready structure
+This project demonstrates:
+
+- AI-powered planning systems
+- structured output generation
+- full-stack architecture
+- interactive learning workflow
+- real-world AI application
+
+Planix AI explores a future where AI acts not just as a chatbot, but as a **structured learning architect**.
 
 ---
 
-## 📈 Future Scope
+# 🔮 Future Improvements
 
-- Multi-model AI support
-- Collaborative learning spaces
+Potential future features include:
+
+- collaborative learning spaces
 - AI-powered progress analytics
-- Community roadmap marketplace
-- Mobile app version
+- community roadmap sharing
+- multi-model AI integration
+- mobile app version
 
 ---
 
-## 📜 License
+# 📜 License
 
-This project is licensed under the MIT License.
+MIT License
 
 ---
 
 <div align="center">
 
-### Built by Jayesh Patil  
-AI Builder | Hackathon Developer | Growth Systems Architect  
+Built by **Jayesh Patil**
+
+AI Builder • Hackathon Developer
 
 </div>
